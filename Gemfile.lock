@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NUBIC/surveyor.git
-  revision: b644258d27167528cf80f1985815913fa38da9a0
+  revision: 4135979d5da1e4bd91bc24bb2ed159801a3e788d
   specs:
     surveyor (0.23.0.pre)
       fastercsv (~> 1.5.4)
@@ -140,6 +140,7 @@ GEM
     nokogiri (1.5.5)
     orm_adapter (0.4.0)
     pdfkit (0.5.2)
+    pg (0.14.0)
     polyglot (0.3.3)
     rabl (0.6.14)
       activesupport (>= 2.3.14)
@@ -243,6 +244,7 @@ DEPENDENCIES
   launchy (>= 2.1.0)
   letter_opener
   pdfkit
+  pg
   rails (= 3.2.6)
   rolify (>= 3.1.0)
   rspec-rails (>= 2.10.1)
