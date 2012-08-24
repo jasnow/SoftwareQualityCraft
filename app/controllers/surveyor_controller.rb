@@ -34,7 +34,6 @@ module SurveyorControllerCustomMethods
     super # available_surveys_path
   end
 end
-
 class SurveyorController < ApplicationController
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
