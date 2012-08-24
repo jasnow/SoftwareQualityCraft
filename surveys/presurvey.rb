@@ -20,6 +20,7 @@ survey "Pre Survey" do
     q03 "Do you have CI (continous integration)?", :pick => :one
     answer "Travis"
     answer "Jenkins"
+    answer "CruiseControl.rb"
     answer "none"
     answer :other, :string
 
