@@ -8,14 +8,20 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /the home\s?page/
+    when /^the home\s?page$/
       '/'
 
-    when /the sign up page/
+    when /^the sign up page$/
       '/users/sign_up'
 
-    when /the sign in page/
+    when /^the sign in page$/
       '/users/sign_in'
+
+    when /the surveys page/
+      '/surveys'
+
+    when /the last response set show page/
+      view_my_survey_path(:survey_code => ResponseSet.last.survey.access_code, :response_set_code => ResponseSet.last.access_code)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
