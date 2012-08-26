@@ -5,10 +5,14 @@ Feature: Input Client Survey
 
   Background:
     Given the survey
+#START
     """
     survey "Pre Survey" do
+
       section "Basic questions" do
+
         label "To learn more about your project, we would like the following information:"
+
         q01 "Do you use work tracking tool?", :pick => :one
         a "Pivotal Tracker"
         a "Mingle"
@@ -33,6 +37,8 @@ Feature: Input Client Survey
         answer "Pivotal Tracker"
         answer "JIRA"
         answer "bugzilla"
+        answer "Github"
+        answer "Bitbucket"
         answer "none"
         answer "other4", :string
       
@@ -46,6 +52,17 @@ Feature: Input Client Survey
         answer "Yes"
         answer "No"
       
+        q07b "What operating system do you use for development and testing?", :pick => :one
+        answer "Mac"
+        answer "Linux"
+        answer "PC"
+        answer "other7b", :string
+
+        q07c "What hosting provider do you use for development and testing?", :pick => :one
+        answer "Heroku"
+        answer "Engine Yard"
+        answer "other7c", :string
+
         q08 "To be part of early access, may I please get read-access to your source code?", :pick => :one
         answer "Yes2"
         answer "No2"
@@ -53,11 +70,15 @@ Feature: Input Client Survey
         q09 "May I have an email to contact you"
         a "email", :string
       
+        q10 "Project (DataSet tag)"
+        a_10 "dataset", :string
+
         label "Thanks,"
         label "SoftwareQualityCraft Team"
       end
     end
     """
+#END
 
     Scenario: HAPPY-PATH: Yes to everything
       When I go to the surveys page
@@ -87,12 +108,25 @@ Feature: Input Client Survey
       And I choose "none"
       And I choose "bugzilla"
       And I choose "JIRA"
+      And I choose "Github"
+      And I choose "Bitbucket"
       And I choose "Pivotal Tracker"
 
       # Q7
       Then I should see "To be part of early access, may I please get read-access to the above tools?"
       And I choose "No"
       And I choose "Yes"
+
+      # Q7B
+      Then I should see "What operating system do you use for development and testing?"
+      And I choose "PC"
+      And I choose "Linux"
+      And I choose "Mac"
+
+      # Q7C
+      Then I should see "What hosting provider do you use for development and testing?"
+      And I choose "Engine Yard"
+      And I choose "Heroku"
 
       # Q8
       Then I should see "To be part of early access, may I please get read-access to your source code?"
@@ -111,7 +145,13 @@ Feature: Input Client Survey
       Then I should see "May I have an email to contact you"
       And I fill in "email" with "example@example.com"
 
+      Then I should see "Project (DataSet tag)"
+      And I fill in "dataset" with "dataset yes01"
+
       And I press "Click here to finish"
+      Then the survey should be complete
+
+######################################################################
 
     Scenario: HAPPY-PATH: No/Unknown to everything
       When I go to the surveys page
@@ -141,6 +181,16 @@ Feature: Input Client Survey
       Then I should see "To be part of early access, may I please get read-access to the above tools?"
       And I choose "No"
 
+      # Q7B
+      Then I should see "What operating system do you use for development and testing?"
+      And I choose "other7b"
+      And I fill in "r_11_string_value" with "os-unknown"  
+
+      # Q7C
+      Then I should see "What hosting provider do you use for development and testing?"
+      And I choose "other7c"
+      And I fill in "r_12_string_value" with "os-unknown"  
+
       # Q8
       Then I should see "To be part of early access, may I please get read-access to your source code?"
       And I choose "No2"
@@ -157,6 +207,11 @@ Feature: Input Client Survey
       Then I should see "May I have an email to contact you"
       And I fill in "email" with ""
 
+      # Q10
+      Then I should see "Project (DataSet tag)"
+      And I fill in "dataset" with "project-unknown"
+
       And I press "Click here to finish"
+      Then the survey should be complete
 
 #      Then show me the page
