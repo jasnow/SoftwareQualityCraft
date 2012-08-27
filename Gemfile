@@ -19,6 +19,7 @@ group :development, :test do
   gem 'simplecov', :require => false
   gem 'autotest'
   gem 'debugger'
+  gem 'cane'
 end
 
 group :production do
