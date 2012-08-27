@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
+  gem 'simplecov', :require => false
 end
 
 group :development, :test do
