@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  # ovverride #create to respond to AJAX with a partial
+  # override #create to respond to AJAX with a partial
   def create
     build_resource
     if resource.save
