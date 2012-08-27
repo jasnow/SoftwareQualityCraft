@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.6'
 
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
 end
 

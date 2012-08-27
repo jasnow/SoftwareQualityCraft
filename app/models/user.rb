@@ -12,11 +12,13 @@ class User < ActiveRecord::Base
   after_create :add_user_to_mailchimp unless Rails.env.test?
   before_destroy :remove_user_from_mailchimp unless Rails.env.test?
 
+  validates_confirmation_of :password
+
   # override Devise method
   # no password is required when the account is created; validate password when the user sets one
   def password_required?
     if !persisted? 
-      false
+      !(password != "")    ## WAS: false
     else
       !password.nil? || !password_confirmation.nil?
     end
