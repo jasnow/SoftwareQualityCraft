@@ -7,7 +7,7 @@ Feature: Input Client Survey
     Given the survey
 #START
     """
-    survey "Pre Survey" do
+    survey "Survey" do
 
       section "Basic questions" do
 

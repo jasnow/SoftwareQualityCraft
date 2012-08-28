@@ -1,4 +1,4 @@
-survey "Pre Survey" do
+survey "Survey" do
 
   section "Basic questions" do
 
