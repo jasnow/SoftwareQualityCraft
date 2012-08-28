@@ -11,4 +11,11 @@ SoftwareQualityCraft::Application.routes.draw do
   resources :users, :only => [:show, :index] do
     get 'invite', :on => :member
   end
+
+  #r.results "results", :conditions => {:method => :get}, :action => "index"
+  #r.result "results/:survey_code", :conditions => {:method => :get}, :action => "show"
+  scope :results do
+    match '/results/index' => 'results#index', :via => :get, :as => :results_index
+    match '/results/:survey_code' => 'results#show', :via => :get, :as => :results_show
+  end
 end
