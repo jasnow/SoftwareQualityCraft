@@ -99,7 +99,7 @@ GEM
       mail (~> 2.2)
       rspec (~> 2.0)
     erubis (2.7.0)
-    excon (0.16.1)
+    excon (0.16.2)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.0.0)

@@ -21,6 +21,9 @@ group :development, :test do
   gem 'autotest'
   gem 'debugger'
   gem 'cane'
+
+  gem "letter_opener"
+  gem "email_spec", ">= 1.2.1" #, :group => :test, :development
 end
 
 group :production do
@@ -36,7 +39,7 @@ end
 gem 'jquery-rails'
 gem "haml", ">= 3.1.6"
 gem "haml-rails", ">= 0.3.4", :group => :development
-gem "email_spec", ">= 1.2.1", :group => :test
+
 gem "hominid"
 gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
@@ -45,7 +48,6 @@ gem "google_visualr", ">= 2.1.2"
 gem "jquery-datatables-rails", ">= 1.10.0"
 gem "bootstrap-sass", ">= 2.0.3"
 gem "simple_form"
-gem "letter_opener"
 gem "heroku"
 gem "surveyor", :git => "git://github.com/NUBIC/surveyor.git"
 gem "pdfkit"
