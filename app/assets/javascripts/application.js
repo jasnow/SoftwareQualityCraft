@@ -26,18 +26,16 @@ $('document').ready(function() {
   // use AJAX to submit the "request invitation" form
   $('#invitation_button').live('click', function() {
     var email = $('form #user_email').val();
-    if($('form #user_opt_in').is(':checked'))
-        var opt_in = true;
-    else
-        var opt_in = false;
-    var dataString = 'user[email]='+ email + '&user[opt_in]=' + opt_in;
+    var password = $('form #user_password').val();
     $.ajax({
       type: "POST",
       url: "/users",
-      data: dataString,
+      //Allow for gmail style aliases (e.g. user+foo@example.com)
+      data: {"user[email]": email, "user[password]": password},
       success: function(data) {
         $('#request-invite').html(data);
-        loadSocial();
+        //Not using the social media share modal, so yank that out
+        //loadSocial();
       }
     });
     return false;

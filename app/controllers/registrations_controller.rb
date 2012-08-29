@@ -10,6 +10,8 @@ class RegistrationsController < Devise::RegistrationsController
           return)  if request.xhr?
         respond_with resource, :location => after_sign_up_path_for(resource)
       else
+        # Make sure there is no password
+        resource.update_attribute(:encrypted_password, nil)
         expire_session_data_after_sign_in!
         (render(:partial => 'thankyou', :layout => false) &&
           return)  if request.xhr?
@@ -18,6 +20,11 @@ class RegistrationsController < Devise::RegistrationsController
       end
     else
       clean_up_passwords resource
+      #1CLICK:
+      # TODO - make sure this adjusted code works with sending out invites
+      #render(:partial => 'email_capture',
+      #  :action => :new, :layout => !request.xhr?)
+      # The original template code:
       render :action => :new, :layout => !request.xhr?
     end
   end

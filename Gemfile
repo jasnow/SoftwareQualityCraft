@@ -42,6 +42,7 @@ gem "haml-rails", ">= 0.3.4", :group => :development
 
 gem "hominid"
 gem "devise", ">= 2.1.2"
+gem "devise_invitable", ">= 1.0.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.1.0"
 gem "google_visualr", ">= 2.1.2"
