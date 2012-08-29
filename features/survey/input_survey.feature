@@ -64,8 +64,8 @@ Feature: Input Client Survey
         answer "other7c", :string
 
         q08 "To be part of early access, may I please get read-access to your source code?", :pick => :one
-        answer "Yes2"
-        answer "No2"
+        answer "yes"
+        answer "no"
       
         q09 "May I have an email to contact you"
         a "email", :string
@@ -130,8 +130,8 @@ Feature: Input Client Survey
 
       # Q8
       Then I should see "To be part of early access, may I please get read-access to your source code?"
-      And I choose "No2"
-      And I choose "Yes2"
+      And I choose "no"
+      And I choose "yes"
 
       # Q5
       Then I should see "What types of testing do you do?"
@@ -193,7 +193,7 @@ Feature: Input Client Survey
 
       # Q8
       Then I should see "To be part of early access, may I please get read-access to your source code?"
-      And I choose "No2"
+      And I choose "no"
 
       # Q5
       Then I should see "What types of testing do you do?"

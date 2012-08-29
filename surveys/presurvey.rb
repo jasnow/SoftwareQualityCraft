@@ -55,8 +55,8 @@ survey "Survey" do
     answer "other7c", :string
 
     q08 "To be part of early access, may I please get read-access to your source code?", :pick => :one
-    answer "Yes2"
-    answer "No2"
+    answer "yes"
+    answer "no"
 
     q09 "May I have an email to contact you"
     a "email", :string
