@@ -25,6 +25,7 @@ group :development, :test do
   gem 'simplecov', :require => false
   gem 'autotest'
   gem 'debugger'
+  #gem 'html2haml'
 
 # STATIC ANALYSIS
   gem 'cane' # include 'flog' 
