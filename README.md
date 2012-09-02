@@ -17,7 +17,7 @@ Software Quality Craft
 
  7. T05: Move "Sign In"/"Users" (alerts) below the top bar.
 
- 8. T06 (Extra Credit) Can we support Back button?
+ 8. T06: (Extra Credit) Can we support Back button?
 
  9. DETAIL PAGE-FLOW
   * Localhost:3000 to main-page
