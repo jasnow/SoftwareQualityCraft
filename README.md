@@ -1,7 +1,7 @@
 Software Quality Craft
 ======================
 
- 1. APP BASIC-FLOW
+ 1. OVERALL APP PAGE-FLOW
   * start =1=> MAIN-PAGE =2=> SURVEY =3=> REQUEST =4=> ADMIN-LOGIN =5=> SEND-EMAIL =6=> CONFIRM-EMAIL =7=> ACCOUNT =8=> WAIT
 
  2. T00: Base all work on existing "softwarequalitycraft" github repo. Please do not delete stuff without asking.
@@ -19,7 +19,7 @@ Software Quality Craft
 
  8. T06 (Extra Credit) Can we support Back button?
 
- 9. OVERALL PAGE-FLOW
+ 9. DETAIL PAGE-FLOW
   * Localhost:3000 to main-page
    * LOGIN: main-page to Login Dialog
     * Login-Dialog (email, PW, Remember Me, "Sign In" button, "Forgot your password? link)
