@@ -31,12 +31,12 @@ Software Quality Craft
      * Edit-Dialog (name, email, PW, PW-C, C-PW, Update button, Cancel-Account)
     * Admin
      * Admin-Dialog (10,50,100,500,1000-Bulk-Invites, Click on 1 user, chart-stuff)
-    * SIGNUP: SignUp back to main-page
-    * REQUEST-INVITE: main-page-Dialog
-     * "X" (top right corner)
-     * Close
-     * main-page-Dialog to Request-Dialog
-      * email + request-invitation
-      * request-dialog 
+   * SIGNUP: SignUp back to main-page
+   * REQUEST-INVITE: main-page-Dialog
+    * "X" (top right corner)
+    * Close
+    * main-page-Dialog to Request-Dialog
+     * email + request-invitation
+     * request-dialog 
 EOF
 
