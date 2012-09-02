@@ -38,5 +38,4 @@ Software Quality Craft
     * main-page-Dialog to Request-Dialog
      * email + request-invitation
      * request-dialog 
-EOF
 
