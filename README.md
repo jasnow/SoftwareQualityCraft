@@ -2,17 +2,16 @@ Software Quality Craft
 ======================
 
  1. APP BASIC-FLOW
-  * <start> =1=> MAIN-PAGE =2=> SURVEY =3=> REQUEST =4=> ADMIN-LOGIN =5=> SEND-EMAIL =6=> CONFIRM-EMAIL =7=> ACCOUNT.
+  * start =1=> MAIN-PAGE =2=> SURVEY =3=> REQUEST =4=> ADMIN-LOGIN =5=> SEND-EMAIL =6=> CONFIRM-EMAIL =7=> ACCOUNT =8=> WAIT
 
- 2. T00: Base on work on existing "softwarequalitycraft" github repo. Please do not delete stuff without asking.
+ 2. T00: Base all work on existing "softwarequalitycraft" github repo. Please do not delete stuff without asking.
 
- 3. T01: Use prototype.html.erb as main page (between steps 1 & 2).
+ 3. T01: Merge app/views/devise/registrations/prototype.html.erb with existing main page (between steps 1 & 2).
 
  4. T02: Insert Survey (named: surveyor) between steps 2 and 3.
     Change the "Request Invite" to "Take Survey" on main-page.
 
- 5. T03: After survey (step 3), email survey-results to me, 
-        send response to user.
+ 5. T03: After survey (step 3), email survey-results to me and send response to user.
 
  6. T04: Send me a SMALL email each time someone registers (step 4). 
 
