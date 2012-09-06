@@ -1,6 +1,6 @@
 module ResultsHelper
   def display_response(r_set, question)
-    sets = get_sets(r_set)
+    sets = get_sets(r_set, question)
 
     if sets.size == 0
       return_text = "-"
@@ -19,7 +19,7 @@ module ResultsHelper
     return_text
   end
 
-  def get_sets(r_set)
+  def get_sets(r_set, question)
     r_set.responses.select do |r|
       r.question.display_order == question.display_order
     end

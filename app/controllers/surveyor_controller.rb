@@ -13,6 +13,7 @@ module SurveyorControllerCustomMethods
   end
   def create
     super
+    logger.debug "create surveyor successfully!"
   end
   def show
     super
@@ -32,6 +33,10 @@ module SurveyorControllerCustomMethods
   def surveyor_finish
     # the update action redirects to this method if given params[:finish]
     super # available_surveys_path
+    logger.debug "finish surveyor successfully!"
+    response_set  = ResponseSet.find_by_access_code(params[:response_set_code])
+    UserMailer.notify_survey_result(response_set).deliver
+    root_path
   end
 end
 
