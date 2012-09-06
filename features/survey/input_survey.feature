@@ -17,21 +17,21 @@ Feature: Input Client Survey
         a "Pivotal Tracker"
         a "Mingle"
         a "none"
-        a "other1", :string
+        a "other", :string
       
         q02 "What languages do you use with your web site?", :pick => :one
         answer "Ruby"
         answer "Python"
         answer "Java"
         answer "C#"
-        answer "other2", :string
+        answer "other", :string
       
         q03 "Do you have CI (continous integration)?", :pick => :one
         answer "Travis"
         answer "Jenkins"
         answer "CruiseControl.rb"
         answer "none"
-        answer "other3", :string
+        answer "other", :string
       
         q04 "Do you use bug tracking tool?", :pick => :one
         answer "Pivotal Tracker"
@@ -40,7 +40,7 @@ Feature: Input Client Survey
         answer "Github"
         answer "Bitbucket"
         answer "none"
-        answer "other4", :string
+        answer "other", :string
       
         q05 "What types of testing do you do?"
         a "testtypes", :text
@@ -56,12 +56,12 @@ Feature: Input Client Survey
         answer "Mac"
         answer "Linux"
         answer "PC"
-        answer "other7b", :string
+        answer "other", :string
 
         q07c "What hosting provider do you use for development and testing?", :pick => :one
         answer "Heroku"
         answer "Engine Yard"
-        answer "other7c", :string
+        answer "other", :string
 
         q08 "To be part of early access, may I please get read-access to your source code?", :pick => :one
         answer "yes"
@@ -74,7 +74,9 @@ Feature: Input Client Survey
         a_10 "dataset", :string
 
         label "Thanks,"
-        label "SoftwareQualityCraft Team"
+        label "Software Quality Craft Team"
+
+        label "When you finish, click over there ==>"
       end
     end
     """
@@ -159,22 +161,22 @@ Feature: Input Client Survey
 
       # Q1
       Then I should see "Do you use work tracking tool?"
-      And I choose "other1"
+      And I choose "other"
       And I fill in "r_1_string_value" with "work-unknown"  
 
       # Q2
       Then I should see "What languages do you use with your web site?"
-      And I choose "other2"
+      And I choose "other"
       And I fill in "r_2_string_value" with "lang-unknown"  
 
       # Q3
       Then I should see "Do you have CI (continous integration)?"
-      And I choose "other3"
+      And I choose "other"
       And I fill in "r_3_string_value" with "ci-unknown"  
 
       # Q4
       Then I should see "Do you use bug tracking tool?"
-      And I choose "other4"
+      And I choose "other"
       And I fill in "r_4_string_value" with "bugtool-unknown"  
 
       # Q7
@@ -183,12 +185,12 @@ Feature: Input Client Survey
 
       # Q7B
       Then I should see "What operating system do you use for development and testing?"
-      And I choose "other7b"
+      And I choose "other"
       And I fill in "r_11_string_value" with "os-unknown"  
 
       # Q7C
       Then I should see "What hosting provider do you use for development and testing?"
-      And I choose "other7c"
+      And I choose "other"
       And I fill in "r_12_string_value" with "os-unknown"  
 
       # Q8
