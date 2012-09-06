@@ -255,3 +255,25 @@ end
 ####     element['disabled'].should be_nil
 ####   end
 #### end
+Given /^there is one finished survey$/ do
+  steps %{
+    Given the survey
+    """
+    survey "Favorites" do
+      section "Foods" do
+        q01 "What is the best meat?", :pick => :one
+        a "bacon"
+        a "chicken"
+        a "beef"
+      end
+    end
+    """
+    When I go to the surveys page
+    And I press "Take it"
+    And I choose "bacon"
+  }
+end
+
+When /^the admin should get one email notification sent to "(.*?)"$/ do |arg1|
+  open_last_email.should be_delivered_to arg1
+end
