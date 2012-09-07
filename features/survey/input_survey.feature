@@ -220,3 +220,13 @@ Feature: Input Client Survey
       Then the survey should be complete
 
 #      Then show me the page
+  Scenario: the same user repeat the survey 
+    Given I have one user already whose email is "example@example.com"
+    Given finish the survey
+    When I press "Click here to finish"
+    Then the survey should be complete
+    And the admin should get one email notification sent to "al@softwarequalitycraft.com"
+    But the email "example@example.com" should just belongs to one user.
+  
+  
+  

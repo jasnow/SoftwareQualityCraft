@@ -34,7 +34,8 @@ module SurveyorControllerCustomMethods
     # the update action redirects to this method if given params[:finish]
     super # available_surveys_path
     logger.debug "finish surveyor successfully!"
-    if params.try(:[], :r).try(:[], '11').try(:[], 'string_value')
+    email = params.try(:[], :r).try(:[], '11').try(:[], 'string_value')
+    if email && !User.exists?(:email => email)
       user = User.create(:email => params['r']['11']['string_value']) 
       user.update_attribute(:encrypted_password, nil)
       user.password = user.password_confirmation = nil
