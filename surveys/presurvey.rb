@@ -8,21 +8,21 @@ survey "Survey" do
     a "Pivotal Tracker"
     a "Mingle"
     a "none"
-    a "other1", :string
+    a "other", :string
 
     q02 "What languages do you use with your web site?", :pick => :one
     answer "Ruby"
     answer "Python"
     answer "Java"
     answer "C#"
-    answer "other2", :string
+    answer "other", :string
 
     q03 "Do you have CI (continous integration)?", :pick => :one
     answer "Travis"
     answer "Jenkins"
     answer "CruiseControl.rb"
     answer "none"
-    answer "other3", :string
+    answer "other", :string
 
     q04 "Do you use bug tracking tool?", :pick => :one
     answer "Pivotal Tracker"
@@ -31,7 +31,7 @@ survey "Survey" do
     answer "Github"
     answer "Bitbucket"
     answer "none"
-    answer "other4", :string
+    answer "other", :string
 
     q05 "What types of testing do you do?"
     a "testtypes", :text
@@ -47,12 +47,12 @@ survey "Survey" do
     answer "Mac"
     answer "Linux"
     answer "PC"
-    answer "other7b", :string
+    answer "other", :string
 
     q07c "What hosting provider do you use for development and testing?", :pick => :one
     answer "Heroku"
     answer "Engine Yard"
-    answer "other7c", :string
+    answer "other", :string
 
     q08 "To be part of early access, may I please get read-access to your source code?", :pick => :one
     answer "yes"
@@ -65,6 +65,8 @@ survey "Survey" do
     a_10 "dataset", :string
 
     label "Thanks,"
-    label "SoftwareQualityCraft Team"
+    label "Software Quality Craft Team"
+
+    label "When you finish, click over there ==>"
   end
 end
