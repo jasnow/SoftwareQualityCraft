@@ -281,3 +281,83 @@ end
 Then /^One user is created by the email "(.*?)"$/ do |arg1|
   User.exists?(:email => arg1).should be_true
 end
+
+Given /^I have one user already whose email is "(.*?)"$/ do |arg1|
+  User.create(:email => arg1)
+end
+
+Given /^finish the survey$/ do
+  steps %{
+    When I go to the surveys page
+    And I press "Take it"
+
+    Then I should see "Do you use work tracking tool?"
+    And I choose "Mingle"
+    And I choose "Pivotal Tracker"
+    And I choose "none"
+
+
+    Then I should see "What languages do you use with your web site?"
+    And I choose "C#"
+    And I choose "Java"
+    And I choose "Python"
+    And I choose "Ruby"
+
+
+    Then I should see "Do you have CI (continous integration)?"
+    And I choose "none"
+    And I choose "CruiseControl.rb"
+    And I choose "Jenkins"
+    And I choose "Travis"
+
+
+    Then I should see "Do you use bug tracking tool?"
+    And I choose "none"
+    And I choose "bugzilla"
+    And I choose "JIRA"
+    And I choose "Github"
+    And I choose "Bitbucket"
+    And I choose "Pivotal Tracker"
+
+
+    Then I should see "To be part of early access, may I please get read-access to the above tools?"
+    And I choose "No"
+    And I choose "Yes"
+
+
+    Then I should see "What operating system do you use for development and testing?"
+    And I choose "PC"
+    And I choose "Linux"
+    And I choose "Mac"
+
+
+    Then I should see "What hosting provider do you use for development and testing?"
+    And I choose "Engine Yard"
+    And I choose "Heroku"
+
+
+    Then I should see "To be part of early access, may I please get read-access to your source code?"
+    And I choose "no"
+    And I choose "yes"
+
+
+    Then I should see "What types of testing do you do?"
+    And I fill in "testtypes" with "unit, gui, acceptance"
+
+
+    Then I should see "What types of metrics do you use on your project?"
+    And I fill in "metrics" with "coverage"
+
+
+    Then I should see "May I have an email to contact you"
+    And I fill in "email" with "example@example.com"
+
+    Then I should see "Project (DataSet tag)"
+    And I fill in "dataset" with "dataset yes01"
+  }
+end
+
+
+Then /^the email "(.*?)" should just belongs to one user\.$/ do |arg1|
+  User.count(:conditions => "email = '#{arg1}'")
+end
