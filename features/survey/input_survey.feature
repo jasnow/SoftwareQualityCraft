@@ -150,6 +150,9 @@ Feature: Input Client Survey
 
       And I press "Click here to finish"
       Then the survey should be complete
+      
+      And the admin should get one email notification sent to "al@softwarequalitycraft.com"
+      And One user is created by the email "example@example.com"
 
 ######################################################################
 
