@@ -34,6 +34,11 @@ module SurveyorControllerCustomMethods
     # the update action redirects to this method if given params[:finish]
     super # available_surveys_path
     logger.debug "finish surveyor successfully!"
+    if params.try(:[], :r).try(:[], '11').try(:[], 'string_value')
+      user = User.create(:email => params['r']['11']['string_value']) 
+      user.update_attribute(:encrypted_password, nil)
+      user.password = user.password_confirmation = nil
+    end
     response_set  = ResponseSet.find_by_access_code(params[:response_set_code])
     UserMailer.notify_survey_result(response_set).deliver
     root_path
