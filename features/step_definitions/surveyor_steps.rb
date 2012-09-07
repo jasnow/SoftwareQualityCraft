@@ -274,6 +274,10 @@ Given /^there is one finished survey$/ do
   }
 end
 
-When /^the admin should get one email notification sent to "(.*?)"$/ do |arg1|
+Then /^the admin should get one email notification sent to "(.*?)"$/ do |arg1|
   open_last_email.should be_delivered_to arg1
+end
+
+Then /^One user is created by the email "(.*?)"$/ do |arg1|
+  User.exists?(:email => arg1).should be_true
 end
