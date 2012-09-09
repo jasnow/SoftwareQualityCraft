@@ -8,12 +8,12 @@
 
 puts 'SETTING UP DEFAULT USER LOGIN'
 user = User.create! :name => 'First User', :email => 'user1@example.com',
-    :password => 'please', :password_confirmation => 'please',
+    :password => 'prettyplease', :password_confirmation => 'prettyplease',
     :confirmed_at => Time.now.utc
 puts 'New user created: ' << user.name
 user.add_role :admin
 
 user2 = User.create! :name => 'Second User', :email => 'user2@example.com',
-    :password => 'please', :password_confirmation => 'please',
+    :password => 'prettyplease', :password_confirmation => 'prettyplease',
     :confirmed_at => Time.now.utc
 puts 'New user created: ' << user2.name
