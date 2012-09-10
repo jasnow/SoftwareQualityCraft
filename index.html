@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="SoftwareQualityCraft : Ready to do more than Bug Reports and Test Cases -- Need a second independent overall opinion" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>SoftwareQualityCraft</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jasnow/SoftwareQualityCraft">View on GitHub</a>
+
+          <h1 id="project_title">SoftwareQualityCraft</h1>
+          <h2 id="project_tagline">Ready to do more than Bug Reports and Test Cases -- Need a second independent overall opinion</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jasnow/SoftwareQualityCraft/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jasnow/SoftwareQualityCraft/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Software Quality Craft</h1>
+
+<ol>
+<li>
+<p>OVERALL APP PAGE-FLOW</p>
+
+<ul>
+<li>start =1=&gt; MAIN-PAGE =2=&gt; SURVEY =3=&gt; REQUEST =4=&gt; ADMIN-LOGIN =5=&gt; SEND-EMAIL =6=&gt; CONFIRM-EMAIL =7=&gt; ACCOUNT =8=&gt; WAIT</li>
+</ul>
+</li>
+<li>
+<p>T00: Base all work on existing "softwarequalitycraft" Github repo. Please do not delete stuff without asking. </p>
+
+<p>2b. T00.5: Please fix tests as they break.</p>
+
+<p>2c. T00.6: Encourage frequency (LOTS) of "pull requests" when things become stable.</p>
+</li>
+<li><p>T01: Merge app/views/devise/registrations/prototype.html.erb with existing main page (between steps 1 &amp; 2).</p></li>
+<li><p>T02: Insert Survey (named: surveyor) between steps 2 and 3.
+Change the "Request Invite" to "Take Survey" on main-page.</p></li>
+<li><p>T03: After survey (step 3), email survey-results to me and send response to user.</p></li>
+<li><p>T04: Send me a SMALL email each time someone registers (step 4). ** Probably duplicate if we do T03 ** </p></li>
+<li><p>T05: Move "Sign In"/"Users" (alerts) below the top bar.</p></li>
+<li><p>T06: (Extra Credit) Can we support Back button?</p></li>
+<li>
+<p>DETAIL PAGE-FLOW</p>
+
+<ul>
+<li>Localhost:3000 to main-page
+
+<ul>
+<li>LOGIN: main-page to Login Dialog
+
+<ul>
+<li>Login-Dialog (email, PW, Remember Me, "Sign In" button, "Forgot your password? link)
+
+<ul>
+<li>Login-Dialog back to main-page</li>
+</ul>
+</li>
+<li>Logout
+
+<ul>
+<li>Back to main-page</li>
+</ul>
+</li>
+<li>Edit Account
+
+<ul>
+<li>Edit-Dialog (name, email, PW, PW-C, C-PW, Update button, Cancel-Account)</li>
+</ul>
+</li>
+<li>Admin
+
+<ul>
+<li>Admin-Dialog (10,50,100,500,1000-Bulk-Invites, Click on 1 user, chart-stuff)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SIGNUP: SignUp back to main-page</li>
+<li>REQUEST-INVITE: main-page-Dialog
+
+<ul>
+<li>"X" (top right corner)</li>
+<li>Close</li>
+<li>main-page-Dialog to Request-Dialog
+
+<ul>
+<li>email + request-invitation</li>
+<li>request-dialog </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Background:</p>
+
+<ul>
+<li>This code is a mashup for 3 existing projects (along with other gems).
+
+<ul>
+<li>
+<a href="https://github.com/RailsApps/rails-prelaunch-signup">https://github.com/RailsApps/rails-prelaunch-signup</a> (expected to include in project)</li>
+<li>
+<a href="https://github.com/NUBIC/surveyor">https://github.com/NUBIC/surveyor</a> (MIT license)</li>
+<li>
+<a href="https://github.com/garethrees/landing-page">https://github.com/garethrees/landing-page</a> (added license question issue to project)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>License: TBD</p></li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">SoftwareQualityCraft maintained by <a href="https://github.com/jasnow">jasnow</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
