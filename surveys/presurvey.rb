@@ -4,52 +4,53 @@ survey "Survey" do
 
     label "To learn more about your project, we would like the following information:"
 
-    q01 "Do you use work tracking tool?", :pick => :one
+    q01 "Do you use work tracking tool?", :pick => :any
     a "Pivotal Tracker"
     a "Mingle"
     a "none"
     a "other", :string
 
-    q02 "What languages do you use with your web site?", :pick => :one
+    q02 "What languages do you use with your web site?", :pick => :any
     answer "Ruby"
     answer "Python"
     answer "Java"
     answer "C#"
     answer "other", :string
 
-    q03 "Do you have CI (continous integration)?", :pick => :one
+    q03 "Do you have CI (continous integration)?", :pick => :any
     answer "Travis"
     answer "Jenkins"
     answer "CruiseControl.rb"
     answer "none"
     answer "other", :string
 
-    q04 "Do you use bug tracking tool?", :pick => :one
+    q04 "Do you use bug/exception tracking tool?", :pick => :any
     answer "Pivotal Tracker"
     answer "JIRA"
     answer "bugzilla"
     answer "Github"
     answer "Bitbucket"
+    answer "aibrake.io"
     answer "none"
     answer "other", :string
 
     q05 "What types of testing do you do?"
     a "testtypes", :text
 
-    q06 "What types of metrics do you use on your project?"
+    q06 "What types of development metrics do you use on your project?"
     a "metrics", :text
 
     q07 "To be part of early access, may I please get read-access to the above tools?", :pick => :one
     answer "Yes"
     answer "No"
 
-    q07b "What operating system do you use for development and testing?", :pick => :one
+    q07b "What operating system do you use for development and testing?", :pick => :any
     answer "Mac"
     answer "Linux"
     answer "PC"
     answer "other", :string
 
-    q07c "What hosting provider do you use for development and testing?", :pick => :one
+    q07c "What hosting provider do you use for development and testing?", :pick => :any
     answer "Heroku"
     answer "Engine Yard"
     answer "other", :string
