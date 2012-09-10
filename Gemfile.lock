@@ -96,6 +96,8 @@ GEM
     cucumber-rails-training-wheels (1.0.0)
       cucumber-rails (>= 1.1.1)
     database_cleaner (0.8.0)
+    deadweight (0.2.1)
+      nokogiri
     debugger (1.2.0)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
@@ -324,9 +326,11 @@ DEPENDENCIES
   cane
   capybara
   coffee-rails (~> 3.2.1)
+  colored
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
+  deadweight
   debugger
   devise (>= 2.1.2)
   devise_invitable (>= 1.0.2)

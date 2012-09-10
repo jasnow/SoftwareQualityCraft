@@ -28,6 +28,9 @@ group :development, :test do
   gem 'debugger'
   #gem 'html2haml'
 
+  gem 'colored'
+  gem 'deadweight', :require => 'deadweight/hijack/rails'
+
 # STATIC ANALYSIS
   gem 'cane' # include 'flog' 
   gem 'flay' # dryness
