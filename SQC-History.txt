@@ -1,2 +1,4 @@
        7      31     285 Rakefile
 DOC: wc into file
+       7      31     285 Rakefile
+DOC: wc into file
