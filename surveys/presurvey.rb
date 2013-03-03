@@ -4,27 +4,27 @@ survey "Survey" do
 
     label "To learn more about your project, we would like the following information:"
 
-    q01 "Do you use work tracking tool?", :pick => :any
-    a "Pivotal Tracker"
-    a "Mingle"
-    a "none"
-    a "other", :string
+    question_1 "Do you use work tracking tool?", :pick => :any
+    answer "Pivotal Tracker"
+    answer "Mingle"
+    answer "none"
+    answer "other", :string
 
-    q02 "What languages do you use with your web site?", :pick => :any
+    question_2 "What languages do you use with your web site?", :pick => :any
     answer "Ruby"
     answer "Python"
     answer "Java"
     answer "C#"
     answer "other", :string
 
-    q03 "Do you have CI (continous integration)?", :pick => :any
+    question_3 "Do you have CI (continous integration)?", :pick => :any
     answer "Travis"
     answer "Jenkins"
     answer "CruiseControl.rb"
     answer "none"
     answer "other", :string
 
-    q04 "Do you use bug/exception tracking tool?", :pick => :any
+    question_4 "Do you use bug/exception tracking tool?", :pick => :any
     answer "Pivotal Tracker"
     answer "JIRA"
     answer "bugzilla"
@@ -34,38 +34,38 @@ survey "Survey" do
     answer "none"
     answer "other", :string
 
-    q05 "What types of testing do you do?"
+    question_5 "What types of testing do you do?"
     a "testtypes", :text
 
-    q06 "What types of development metrics do you use on your project?"
+    question_6 "What types of development metrics do you use on your project?"
     a "metrics", :text
 
-    q07 "To be part of early access, may I please get read-access to the above tools?", :pick => :one
+    question_7 "To be part of early access, may I please get read-access to the above tools?", :pick => :one
     answer "Yes"
     answer "No"
 
-    q07b "What operating system do you use for development and testing?", :pick => :any
+    question_7b "What operating system do you use for development and testing?", :pick => :any
     answer "Mac"
     answer "Linux"
     answer "PC"
     answer "other", :string
 
-    q07c "What hosting provider do you use for development and testing?", :pick => :any
+    question_7c "What hosting provider do you use for development and testing?", :pick => :any
     answer "Heroku"
     answer "Engine Yard"
     answer "other", :string
 
-    q08 "To be part of early access, may I please get read-access to your source code?", :pick => :one
+    question_8 "To be part of early access, may I please get read-access to your source code?", :pick => :one
     answer "yes"
     answer "no"
 
-    q09 "May I have an email to contact you"
+    question_9 "May I have an email to contact you"
     a "email", :string
 
-    q10 "Project (DataSet tag)"
+    question_10 "Project (DataSet tag)"
     a_10 "dataset", :string
 
-    q11 "What question did I forget to ask?"
+    question_11 "What question did I forget to ask?"
     answer :text
 
     label "Thanks,"
