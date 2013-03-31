@@ -58,8 +58,7 @@ end
 
 gem 'jquery-rails'
 gem "haml"
-#, ">= 3.1.6"
-gem "haml-rails", ">= 0.3.4", :group => :development
+gem "haml-rails", ">= 0.4", :group => :development
 gem "jquery-datatables-rails", ">= 1.10.0"
 gem "bootstrap-sass", ">= 2.0.3"
 gem "simple_form"
@@ -72,7 +71,7 @@ gem "devise_invitable", ">= 1.0.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.1.0"
 
-gem "surveyor", "~> 1.2.0"
+gem "surveyor", "~> 1.3.0"
 #### , :git => "git://github.com/NUBIC/surveyor.git"
 gem "pdfkit"
 gem "wkhtmltopdf-binary"
