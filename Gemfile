@@ -17,7 +17,7 @@ group :development, :test do
   gem 'mysql2'
   gem 'sqlite3'
   gem 'database_cleaner'
-  gem "capybara"
+  gem "capybara", '2.0.3' # capybara (2.0.3 => 2.1.0)
   gem 'launchy'
   gem 'rspec'
   gem "rspec-rails", "~> 2.0"
