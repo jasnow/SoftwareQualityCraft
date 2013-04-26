@@ -1,6 +1,10 @@
 Software Quality Craft
 ======================
 
+[![Build Status](https://travis-ci.org/jasnow/SoftwareQualityCraft.png)](https://travis-ci.org/jasnow/SoftwareQualityCraft)
+
+[![Dependency Status](https://gemnasium.com/jasnow/SoftwareQualityCraft.png)](https://gemnasium.com/jasnow/SoftwareQualityCraft)
+
  1. OVERALL APP PAGE-FLOW
   * start =1=> MAIN-PAGE =2=> SURVEY =3=> REQUEST =4=> ADMIN-LOGIN =5=> SEND-EMAIL =6=> CONFIRM-EMAIL =7=> ACCOUNT =8=> WAIT
 
