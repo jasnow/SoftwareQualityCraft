@@ -5,3 +5,4 @@ rvm:
 
 before_script:
   - "cp config/database.sample.yml config/database.yml"
+  - "bundle exec rake db:migrate"
