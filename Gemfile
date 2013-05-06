@@ -62,7 +62,6 @@ gem "haml-rails", ">= 0.4", :group => :development
 gem "jquery-datatables-rails", ">= 1.10.0"
 gem "bootstrap-sass", ">= 2.0.3"
 gem "simple_form"
-gem "heroku"
 gem "hominid" # related to mailchimp email service
 gem "google_visualr", ">= 2.1.2" # Google Chart Tools
 
