@@ -95,7 +95,7 @@ GEM
       debugger-linecache (~> 1.2.0)
       debugger-ruby_core_source (~> 1.2.1)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.1)
+    debugger-ruby_core_source (1.2.2)
     devise (2.2.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -293,30 +293,30 @@ PLATFORMS
 
 DEPENDENCIES
   autotest
-  bootstrap-sass (>= 2.0.3)
+  bootstrap-sass
   brakeman
-  cancan (>= 1.6.8)
+  cancan
   cane
   capybara (= 2.0.3)
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   colored
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
   deadweight
   debugger
-  devise (>= 2.1.2)
-  devise_invitable (>= 1.0.2)
-  email_spec (>= 1.2.1)
+  devise
+  devise_invitable
+  email_spec
   excellent
   factory_girl
-  factory_girl_rails (>= 3.5.0)
+  factory_girl_rails
   flay
-  google_visualr (>= 2.1.2)
+  google_visualr
   haml
-  haml-rails (>= 0.4)
+  haml-rails
   hominid
-  jquery-datatables-rails (>= 1.10.0)
+  jquery-datatables-rails
   jquery-rails
   launchy
   letter_opener
@@ -326,15 +326,15 @@ DEPENDENCIES
   rails (= 3.2.13)
   rails_best_practices
   reek
-  rolify (>= 3.1.0)
+  rolify
   rspec
-  rspec-rails (~> 2.0)
-  sass-rails (~> 3.2.3)
+  rspec-rails
+  sass-rails
   selenium
   simple_form
   simplecov
   sqlite3
   surveyor (~> 1.3.0)
   tarantula
-  uglifier (>= 1.0.3)
+  uglifier
   wkhtmltopdf-binary

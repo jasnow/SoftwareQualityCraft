@@ -13,6 +13,8 @@ group :test do
   gem 'tarantula', :require => 'tarantula-rails3'
 end
 
+gem "haml-rails", :group => :development
+
 group :development, :test do
   gem 'mysql2'
   gem 'sqlite3'
@@ -20,9 +22,9 @@ group :development, :test do
   gem "capybara", '2.0.3' # capybara (2.0.3 => 2.1.0)
   gem 'launchy'
   gem 'rspec'
-  gem "rspec-rails", "~> 2.0"
+  gem "rspec-rails"
   gem 'factory_girl'
-  gem "factory_girl_rails", ">= 3.5.0"
+  gem "factory_girl_rails"
   gem 'selenium'
   gem 'simplecov', :require => false
   gem 'autotest'
@@ -43,7 +45,7 @@ group :development, :test do
   gem "brakeman"
 
   gem "letter_opener"
-  gem "email_spec", ">= 1.2.1" #, :group => :test, :development
+  gem "email_spec"
 end
 
 group :production do
@@ -51,24 +53,24 @@ group :production do
 end
 
 group :assets do
-  gem 'sass-rails', '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
 gem "haml"
-gem "haml-rails", ">= 0.4", :group => :development
-gem "jquery-datatables-rails", ">= 1.10.0"
-gem "bootstrap-sass", ">= 2.0.3"
+
+gem "jquery-datatables-rails"
+gem "bootstrap-sass"
 gem "simple_form"
 gem "hominid" # related to mailchimp email service
-gem "google_visualr", ">= 2.1.2" # Google Chart Tools
+gem "google_visualr" # Google Chart Tools
 
-gem "devise", ">= 2.1.2"
-gem "devise_invitable", ">= 1.0.2"
-gem "cancan", ">= 1.6.8"
-gem "rolify", ">= 3.1.0"
+gem "devise"
+gem "devise_invitable"
+gem "cancan"
+gem "rolify"
 
 gem "surveyor", "~> 1.3.0"
 #### , :git => "git://github.com/NUBIC/surveyor.git"
