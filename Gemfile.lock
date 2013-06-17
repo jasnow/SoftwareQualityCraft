@@ -61,7 +61,7 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
-    code_analyzer (0.3.1)
+    code_analyzer (0.3.2)
       sexp_processor
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -161,13 +161,13 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     mini_portile (0.5.0)
-    multi_json (1.7.6)
+    multi_json (1.7.7)
     mustache (0.99.4)
     mysql2 (0.3.11)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
-    parallel (0.6.5)
+    parallel (0.7.0)
     pdfkit (0.5.4)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -189,7 +189,7 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
-    rails_best_practices (1.13.5)
+    rails_best_practices (1.13.7)
       activesupport
       awesome_print
       code_analyzer
