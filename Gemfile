@@ -37,7 +37,7 @@ group :development, :test do
 # STATIC ANALYSIS
   gem 'cane' # include 'flog' 
   gem 'flay' # dryness
-  gem 'reek' # more bad style
+  #BROKEN: gem 'reek' # more bad style
   gem 'rails_best_practices' # LOTS of messages
   gem 'excellent'
 
