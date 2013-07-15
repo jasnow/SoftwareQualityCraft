@@ -67,7 +67,7 @@ gem "simple_form"
 gem "hominid" # related to mailchimp email service
 gem "google_visualr" # Google Chart Tools
 
-gem "devise"
+gem "devise", '2.2.4'
 gem "devise_invitable"
 gem "cancan"
 gem "rolify"
