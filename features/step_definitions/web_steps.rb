@@ -17,30 +17,30 @@
 #### # * http://dannorth.net/2011/01/31/whose-domain-is-it-anyway/
 #### # * http://elabs.se/blog/15-you-re-cuking-it-wrong
 #### #
-#### 
-#### 
+####
+####
 #### require 'uri'
 #### require 'cgi'
 #### require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 #### require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
-#### 
+####
 #### module WithinHelpers
 ####   def with_scope(locator)
 ####     locator ? within(*selector_for(locator)) { yield } : yield
 ####   end
 #### end
 #### World(WithinHelpers)
-#### 
+####
 #### # Single-line step scoper
 #### When /^(.*) within (.*[^:])$/ do |step, parent|
 ####   with_scope(parent) { When step }
 #### end
-#### 
+####
 #### # Multi-line step scoper
 #### When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
 ####   with_scope(parent) { When "#{step}:", table_or_string }
 #### end
-#### 
+####
 #### Given /^(?:|I )am on (.+)$/ do |page_name|
 ####   visit path_to(page_name)
 #### end
@@ -48,7 +48,7 @@
 When /^(?:|I )go to (.+)$/ do |page_name|
    visit path_to(page_name)
 end
- 
+
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
@@ -64,7 +64,7 @@ end
 #### When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
 ####   fill_in(field, :with => value)
 #### end
-#### 
+####
 #### # Use this to fill in an entire form with data from a table. Example:
 #### #
 #### #   When I fill in the following:
@@ -81,15 +81,15 @@ end
 ####     When %{I fill in "#{name}" with "#{value}"}
 ####   end
 #### end
-#### 
+####
 #### When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
 ####   select(value, :from => field)
 #### end
-#### 
+####
 #### When /^(?:|I )check "([^"]*)"$/ do |field|
 ####   check(field)
 #### end
-#### 
+####
 #### When /^(?:|I )uncheck "([^"]*)"$/ do |field|
 ####   uncheck(field)
 #### end
@@ -101,11 +101,11 @@ end
 #### When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
 ####   attach_file(field, File.expand_path(path))
 #### end
-#### 
+####
 #### When /^(?:|I )click "([^"]*)"$/ do |field|
 ####   find_field(field).click
 #### end
-#### 
+####
 #### When /^(?:|I )change "([^"]*)" to "([^"]*)"$/ do |field, value|
 ####   fill_in(field, :with => value)
 ####   id = "#" + find_field(field)[:id]
@@ -122,14 +122,14 @@ end
 
 #### Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
 ####   regexp = Regexp.new(regexp)
-#### 
+####
 ####   if page.respond_to? :should
 ####     page.should have_xpath('//*', :text => regexp)
 ####   else
 ####     assert page.has_xpath?('//*', :text => regexp)
 ####   end
 #### end
-#### 
+####
 #### Then /^(?:|I )should not see "([^"]*)"$/ do |text|
 ####   if page.respond_to? :should
 ####     page.should have_no_content(text)
@@ -137,17 +137,17 @@ end
 ####     assert page.has_no_content?(text)
 ####   end
 #### end
-#### 
+####
 #### Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
 ####   regexp = Regexp.new(regexp)
-#### 
+####
 ####   if page.respond_to? :should
 ####     page.should have_no_xpath('//*', :text => regexp)
 ####   else
 ####     assert page.has_no_xpath?('//*', :text => regexp)
 ####   end
 #### end
-#### 
+####
 #### Then /^the "([^"]*)" field(?: within (.*))? should contain "([^"]*)"$/ do |field, parent, value|
 ####   with_scope(parent) do
 ####     field = find_field(field)
@@ -159,7 +159,7 @@ end
 ####     end
 ####   end
 #### end
-#### 
+####
 #### Then /^the "([^"]*)" field(?: within (.*))? should not contain "([^"]*)"$/ do |field, parent, value|
 ####   with_scope(parent) do
 ####     field = find_field(field)
@@ -171,7 +171,7 @@ end
 ####     end
 ####   end
 #### end
-#### 
+####
 #### Then /^the "([^"]*)" (checkbox|radiobutton)(?: within (.*))? should be checked$/ do |label, _, parent|
 ####   with_scope(parent) do
 ####     field_checked = find_field(label)['checked']
@@ -182,7 +182,7 @@ end
 ####     end
 ####   end
 #### end
-#### 
+####
 #### Then /^the "([^"]*)" (checkbox|radiobutton)(?: within (.*))? should not be checked$/ do |label, _, parent|
 ####   with_scope(parent) do
 ####     field_checked = find_field(label)['checked']
@@ -193,7 +193,7 @@ end
 ####     end
 ####   end
 #### end
-#### 
+####
 #### Then /^(?:|I )should be on (.+)$/ do |page_name|
 ####   current_path = URI.parse(current_url).path
 ####   if current_path.respond_to? :should
@@ -202,20 +202,20 @@ end
 ####     assert_equal path_to(page_name), current_path
 ####   end
 #### end
-#### 
+####
 #### Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
 ####   query = URI.parse(current_url).query
 ####   actual_params = query ? CGI.parse(query) : {}
 ####   expected_params = {}
 ####   expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')}
-#### 
+####
 ####   if actual_params.respond_to? :should
 ####     actual_params.should == expected_params
 ####   else
 ####     assert_equal expected_params, actual_params
 ####   end
 #### end
-#### 
+####
 #### # 8/25/2012: Had two versions so commented out one of them.
 #### #Then /^show me the page$/ do
 #### #  save_and_open_page

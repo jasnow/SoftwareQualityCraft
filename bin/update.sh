@@ -12,7 +12,7 @@ rake surveyor FILE=surveys/presurvey.rb
 
 # REMOTE:
 # git push heroku
-# heroku run rake db:migrate 
+# heroku run rake db:migrate
 # heroku run rake surveyor FILE=surveys/presurvey.rb
 # heroku open
 # heroku logs

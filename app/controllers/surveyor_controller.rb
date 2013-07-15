@@ -36,7 +36,7 @@ module SurveyorControllerCustomMethods
     logger.debug "finish surveyor successfully!"
     email = params.try(:[], :r).try(:[], '11').try(:[], 'string_value')
     if email && !User.exists?(:email => email)
-      user = User.create(:email => params['r']['11']['string_value']) 
+      user = User.create(:email => params['r']['11']['string_value'])
       user.update_attribute(:encrypted_password, nil)
       user.password = user.password_confirmation = nil
     end

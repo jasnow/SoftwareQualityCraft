@@ -3,12 +3,12 @@
 * By: Trent Richardson [http://trentrichardson.com]
 * Version 0.9.7
 * Last Modified: 10/02/2011
-* 
+*
 * Copyright 2011 Trent Richardson
 * Dual licensed under the MIT and GPL licenses.
 * http://trentrichardson.com/Impromptu/GPL-LICENSE.txt
 * http://trentrichardson.com/Impromptu/MIT-LICENSE.txt
-* 
+*
 * HERES THE CSS:
 * .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
 * .ui-timepicker-div dl { text-align: left; }
@@ -213,7 +213,7 @@ $.extend(Timepicker.prototype, {
 	//########################################################################
 	_addTimePicker: function(dp_inst) {
 		var currDT = (this.$altInput && this._defaults.altFieldTimeOnly) ?
-				this.$input.val() + ' ' + this.$altInput.val() : 
+				this.$input.val() + ' ' + this.$altInput.val() :
 				this.$input.val();
 
 		this.timeDefined = this._parseTime(currDT);
@@ -802,9 +802,9 @@ $.extend(Timepicker.prototype, {
 		this.timeDefined = true;
 		if (hasChanged) this._updateDateTime();
 	},
-    
+
 	//########################################################################
-	// call custom onSelect. 
+	// call custom onSelect.
 	// bind to sliders slidestop, and grid click.
 	//########################################################################
 	_onSelectHandler: function() {
@@ -918,9 +918,9 @@ $.fn.extend({
 		tmp_args = arguments;
 
 		if (typeof(o) == 'string'){
-			if(o == 'getDate') 
+			if(o == 'getDate')
 				return $.fn.datepicker.apply($(this[0]), tmp_args);
-			else 
+			else
 				return this.each(function() {
 					var $t = $(this);
 					$t.datepicker.apply($t, tmp_args);

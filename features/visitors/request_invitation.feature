@@ -1,6 +1,6 @@
 Feature: Request Invitation
   As a visitor to the website
-  I want to request an invitation 
+  I want to request an invitation
   so I can be notified when the site is launched
 
   Background:

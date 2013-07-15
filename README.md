@@ -8,7 +8,7 @@ Software Quality Craft
  1. OVERALL APP PAGE-FLOW
   * start =1=> MAIN-PAGE =2=> SURVEY =3=> REQUEST =4=> ADMIN-LOGIN =5=> SEND-EMAIL =6=> CONFIRM-EMAIL =7=> ACCOUNT =8=> WAIT
 
- 2. T00: Base all work on existing "softwarequalitycraft" Github repo. Please do not delete stuff without asking. 
+ 2. T00: Base all work on existing "softwarequalitycraft" Github repo. Please do not delete stuff without asking.
 
  2b. T00.5: Please fix tests as they break.
 
@@ -21,7 +21,7 @@ Software Quality Craft
 
  5. T03: After survey (step 3), email survey-results to me and send response to user.
 
- 6. T04: Send me a SMALL email each time someone registers (step 4). ** Probably duplicate if we do T03 ** 
+ 6. T04: Send me a SMALL email each time someone registers (step 4). ** Probably duplicate if we do T03 **
 
  7. T05: Move "Sign In"/"Users" (alerts) below the top bar.
 
@@ -44,7 +44,7 @@ Software Quality Craft
     * Close
     * main-page-Dialog to Request-Dialog
      * email + request-invitation
-     * request-dialog 
+     * request-dialog
 
  10. Background:
   * This code is a mashup for 3 existing projects (along with other gems).

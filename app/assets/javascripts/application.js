@@ -17,12 +17,12 @@
 //= require dataTables/jquery.dataTables.bootstrap
 //= require_tree .
 $('document').ready(function() {
-  
+
   // display validation errors for the "request invitation" form
   if ($('.alert-error').length > 0) {
     $("#request-invite").modal('toggle');
   }
-  
+
   // use AJAX to submit the "request invitation" form
   $('#invitation_button').live('click', function() {
     var email = $('form #user_email').val();
@@ -40,12 +40,12 @@ $('document').ready(function() {
     });
     return false;
   });
-  
+
 })
 
 // load social sharing scripts if the page includes a Twitter "share" button
 function loadSocial() {
-    
+
     //Twitter
     if (typeof (twttr) != 'undefined') {
       twttr.widgets.load();
