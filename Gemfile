@@ -73,7 +73,6 @@ gem "cancan"
 gem "rolify"
 
 gem "surveyor", "~> 1.3.0"
-#### , :git => "git://github.com/NUBIC/surveyor.git"
 gem "pdfkit"
 gem "wkhtmltopdf-binary"
 
