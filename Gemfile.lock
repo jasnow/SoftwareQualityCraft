@@ -88,7 +88,7 @@ GEM
       rails (>= 3.0.0)
     cucumber-rails-training-wheels (1.0.0)
       cucumber-rails (>= 1.1.1)
-    database_cleaner (1.0.1)
+    database_cleaner (1.2.0)
     deadweight (0.2.2)
       css_parser (~> 1.2.6)
       nokogiri
@@ -310,7 +310,7 @@ DEPENDENCIES
   colored
   cucumber-rails
   cucumber-rails-training-wheels
-  database_cleaner (= 1.0.1)
+  database_cleaner
   deadweight
   debugger
   devise (= 2.2.4)

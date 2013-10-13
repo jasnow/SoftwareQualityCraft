@@ -18,7 +18,7 @@ gem "haml-rails", :group => :development
 group :development, :test do
   gem 'mysql2'
   gem 'sqlite3'
-  gem 'database_cleaner', '1.0.1'
+  gem 'database_cleaner'
   gem "capybara", '2.0.3' # capybara (2.0.3 => 2.1.0)
   gem 'launchy'
   gem 'rspec'
