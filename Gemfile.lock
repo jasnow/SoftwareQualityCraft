@@ -37,11 +37,11 @@ GEM
     bcrypt-ruby (3.1.2)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
-    brakeman (2.1.2)
+    brakeman (2.2.0)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
       haml (>= 3.0, < 5.0)
-      highline (~> 1.6.19)
+      highline (~> 1.6.20)
       multi_json (~> 1.2)
       ruby2ruby (~> 2.0.5)
       ruby_parser (~> 3.2.2)
@@ -71,7 +71,6 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     colored (1.2)
-    columnize (0.3.6)
     css_parser (1.2.6)
       addressable
       rdoc
@@ -92,12 +91,6 @@ GEM
     deadweight (0.2.2)
       css_parser (~> 1.2.6)
       nokogiri
-    debugger (1.6.2)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
     devise (2.2.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -123,7 +116,7 @@ GEM
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
     fastercsv (1.5.5)
-    ffi (1.9.1)
+    ffi (1.9.0)
     flay (2.4.0)
       ruby_parser (~> 3.0)
       sexp_processor (~> 4.0)
@@ -312,7 +305,6 @@ DEPENDENCIES
   cucumber-rails-training-wheels
   database_cleaner
   deadweight
-  debugger
   devise (= 2.2.4)
   devise_invitable
   email_spec

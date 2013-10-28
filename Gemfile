@@ -28,7 +28,6 @@ group :development, :test do
   gem 'selenium'
   gem 'simplecov', :require => false
   gem 'autotest'
-  gem 'debugger'
   #gem 'html2haml'
 
   gem 'colored'
