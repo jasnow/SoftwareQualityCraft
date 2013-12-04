@@ -76,5 +76,7 @@ module SoftwareQualityCraft
     config.assets.version = '1.0'
 
     config.middleware.use PDFKit::Middleware
+
+    I18n.config.enforce_available_locales = false
   end
 end
