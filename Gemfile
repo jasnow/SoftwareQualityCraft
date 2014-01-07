@@ -6,9 +6,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
 
-# DYANMIC ANALYSIS
-  gem 'simplecov', :require => false
-
 # DYNAMIC ANALYSIS: SECURITY
   gem 'tarantula', :require => 'tarantula-rails3'
 end
