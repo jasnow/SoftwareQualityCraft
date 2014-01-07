@@ -3,6 +3,10 @@ language: ruby
 rvm:
 - 2.0.0
 
+env:
+  global:
+    secure: M4SUPhx20BmBiX3defVjog5/OmX9NTuekcuRDIsgC1ml0FD2RO1WCoqhFYSVeltwQ2fekKZkW/jTcuVA5Sq7pTIC3D6YwTfThOTWns4nWee9q//Imr+VUVDmhwAAYJ8H1+r/AOwzpp9vsLWgd7rW1UJxlkfeTkA2Tse0DFOHqs8=
+
 before_script:
   - "cp config/database.sample.yml config/database.yml"
   - "bundle exec rake db:migrate"
